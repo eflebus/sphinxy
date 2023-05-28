@@ -8,6 +8,9 @@ class IncorrectAnswer(Exception):
 
 
 class Sphinx:
+    """
+    Class representing a Sphinx documentation.
+    """
     def __init__(self, name: str) -> None:
         self._name = name
         self._riddle = Riddle(
@@ -19,6 +22,11 @@ class Sphinx:
         )
 
     def introduce(self) -> str:
+        """Prints a greeting.
+
+        Returns:
+            str: The greeting.
+        """
         return (
             f"Greetings, mortals. I am {self._name}. I have guarded the city of Thebes"
             "for centuries and posed riddles to those who dared to approach me."
